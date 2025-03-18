@@ -735,7 +735,7 @@ Types _$TypesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Types {
   int get slot => throw _privateConstructorUsedError;
-  Type get type => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get type => throw _privateConstructorUsedError;
 
   /// Serializes this Types to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -751,9 +751,9 @@ abstract class $TypesCopyWith<$Res> {
   factory $TypesCopyWith(Types value, $Res Function(Types) then) =
       _$TypesCopyWithImpl<$Res, Types>;
   @useResult
-  $Res call({int slot, Type type});
+  $Res call({int slot, NamedApiResourceEntity type});
 
-  $TypeCopyWith<$Res> get type;
+  $NamedApiResourceEntityCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -782,7 +782,7 @@ class _$TypesCopyWithImpl<$Res, $Val extends Types>
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Type,
+              as NamedApiResourceEntity,
     ) as $Val);
   }
 
@@ -790,8 +790,8 @@ class _$TypesCopyWithImpl<$Res, $Val extends Types>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $TypeCopyWith<$Res> get type {
-    return $TypeCopyWith<$Res>(_value.type, (value) {
+  $NamedApiResourceEntityCopyWith<$Res> get type {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value) as $Val);
     });
   }
@@ -804,10 +804,10 @@ abstract class _$$TypesImplCopyWith<$Res> implements $TypesCopyWith<$Res> {
       __$$TypesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int slot, Type type});
+  $Res call({int slot, NamedApiResourceEntity type});
 
   @override
-  $TypeCopyWith<$Res> get type;
+  $NamedApiResourceEntityCopyWith<$Res> get type;
 }
 
 /// @nodoc
@@ -834,7 +834,7 @@ class __$$TypesImplCopyWithImpl<$Res>
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Type,
+              as NamedApiResourceEntity,
     ));
   }
 }
@@ -850,7 +850,7 @@ class _$TypesImpl implements _Types {
   @override
   final int slot;
   @override
-  final Type type;
+  final NamedApiResourceEntity type;
 
   @override
   String toString() {
@@ -887,181 +887,21 @@ class _$TypesImpl implements _Types {
 }
 
 abstract class _Types implements Types {
-  const factory _Types({required final int slot, required final Type type}) =
-      _$TypesImpl;
+  const factory _Types(
+      {required final int slot,
+      required final NamedApiResourceEntity type}) = _$TypesImpl;
 
   factory _Types.fromJson(Map<String, dynamic> json) = _$TypesImpl.fromJson;
 
   @override
   int get slot;
   @override
-  Type get type;
+  NamedApiResourceEntity get type;
 
   /// Create a copy of Types
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TypesImplCopyWith<_$TypesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-Type _$TypeFromJson(Map<String, dynamic> json) {
-  return _Type.fromJson(json);
-}
-
-/// @nodoc
-mixin _$Type {
-  String get name => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
-
-  /// Serializes this Type to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Type
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $TypeCopyWith<Type> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TypeCopyWith<$Res> {
-  factory $TypeCopyWith(Type value, $Res Function(Type) then) =
-      _$TypeCopyWithImpl<$Res, Type>;
-  @useResult
-  $Res call({String name, String url});
-}
-
-/// @nodoc
-class _$TypeCopyWithImpl<$Res, $Val extends Type>
-    implements $TypeCopyWith<$Res> {
-  _$TypeCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Type
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? url = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$TypeImplCopyWith<$Res> implements $TypeCopyWith<$Res> {
-  factory _$$TypeImplCopyWith(
-          _$TypeImpl value, $Res Function(_$TypeImpl) then) =
-      __$$TypeImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String name, String url});
-}
-
-/// @nodoc
-class __$$TypeImplCopyWithImpl<$Res>
-    extends _$TypeCopyWithImpl<$Res, _$TypeImpl>
-    implements _$$TypeImplCopyWith<$Res> {
-  __$$TypeImplCopyWithImpl(_$TypeImpl _value, $Res Function(_$TypeImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Type
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? url = null,
-  }) {
-    return _then(_$TypeImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$TypeImpl implements _Type {
-  const _$TypeImpl({required this.name, required this.url});
-
-  factory _$TypeImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TypeImplFromJson(json);
-
-  @override
-  final String name;
-  @override
-  final String url;
-
-  @override
-  String toString() {
-    return 'Type(name: $name, url: $url)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TypeImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, name, url);
-
-  /// Create a copy of Type
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TypeImplCopyWith<_$TypeImpl> get copyWith =>
-      __$$TypeImplCopyWithImpl<_$TypeImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TypeImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _Type implements Type {
-  const factory _Type({required final String name, required final String url}) =
-      _$TypeImpl;
-
-  factory _Type.fromJson(Map<String, dynamic> json) = _$TypeImpl.fromJson;
-
-  @override
-  String get name;
-  @override
-  String get url;
-
-  /// Create a copy of Type
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TypeImplCopyWith<_$TypeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

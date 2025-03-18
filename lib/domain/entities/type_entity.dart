@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pokedex/domain/entities/named_api_resource_entity.dart';
 
 part 'type_entity.freezed.dart';
 part 'type_entity.g.dart';
@@ -20,27 +21,18 @@ sealed class TypeEntity with _$TypeEntity {
 class TypeRelationsEntity with _$TypeRelationsEntity {
   const factory TypeRelationsEntity({
     @JsonKey(name: 'double_damage_from')
-    required List<TypeRelation> doubleDamageFrom,
+    required NamedApiResourceEntity doubleDamageFrom,
     @JsonKey(name: 'double_damage_to')
-    required List<TypeRelation> doubleDamageTo,
+    required NamedApiResourceEntity doubleDamageTo,
     @JsonKey(name: 'half_damage_from')
-    required List<TypeRelation> halfDamageFrom,
-    @JsonKey(name: 'half_damage_to') required List<TypeRelation> halsDamageTo,
-    @JsonKey(name: 'no_damage_from') required List<TypeRelation> noDamageFrom,
-    @JsonKey(name: 'no_damage_to') required List<TypeRelation> noDamageTo,
+    required NamedApiResourceEntity halfDamageFrom,
+    @JsonKey(name: 'half_damage_to')
+    required NamedApiResourceEntity halsDamageTo,
+    @JsonKey(name: 'no_damage_from')
+    required NamedApiResourceEntity noDamageFrom,
+    @JsonKey(name: 'no_damage_to') required NamedApiResourceEntity noDamageTo,
   }) = _TypeRelationsEntity;
 
   factory TypeRelationsEntity.fromJson(Map<String, Object?> json) =>
       _$TypeRelationsEntityFromJson(json);
-}
-
-@freezed
-class TypeRelation with _$TypeRelation {
-  const factory TypeRelation({
-    required String name,
-    required String url,
-  }) = _TypeRelation;
-
-  factory TypeRelation.fromJson(Map<String, Object?> json) =>
-      _$TypeRelationFromJson(json);
 }

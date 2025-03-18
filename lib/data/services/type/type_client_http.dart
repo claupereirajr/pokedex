@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:pokedex/data/exceptions/exceptions.dart';
 import 'package:pokedex/data/services/client_http.dart';
+import 'package:pokedex/domain/entities/named_api_resource_entity.dart';
 import 'package:pokedex/domain/entities/type_entity.dart';
 import 'package:result_dart/result_dart.dart';
 
@@ -8,12 +9,12 @@ class TypeClientHttp {
   final ClientHttp _clientHttp;
   TypeClientHttp(this._clientHttp);
 
-  AsyncResult<List<TypeRelation>> getListTypes() async {
+  AsyncResult<List<NamedApiResourceEntity>> getListTypes() async {
     try {
       final response = await _clientHttp.get('https://pokeapi.co/api/v2/type/');
       final types = response.map((response) {
         return (response.data['results'] as List)
-            .map((type) => TypeRelation.fromJson(type))
+            .map((type) => NamedApiResourceEntity.fromJson(type))
             .toList();
       }).getOrThrow();
       return Success(types);

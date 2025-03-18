@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:pokedex/data/services/local_storage.dart';
+import 'package:pokedex/domain/entities/named_api_resource_entity.dart';
 import 'package:pokedex/domain/entities/pokemon_entity.dart';
 import 'package:result_dart/result_dart.dart';
 
@@ -11,21 +12,24 @@ class PokemonLocalStorage {
   PokemonLocalStorage(this._localStorage);
 
   AsyncResult<PokemonEntity> getPokemon(int id) {
-    return getListPokemons()
-        .map((list) => list.firstWhere((pokemon) => pokemon.id == id));
+    return _localStorage.getData(_pokemonKey).map(
+          (value) => (value as List)
+              .map((e) => PokemonEntity.fromJson(e))
+              .firstWhere((element) => element.id == id),
+        );
   }
 
-  AsyncResult<List<PokemonEntity>> getListPokemons() async {
+  AsyncResult<List<NamedApiResourceEntity>> getListPokemons() async {
     final listPokemons = _localStorage.getData(_pokemonKey).map(
-          (value) =>
-              (value as List).map((e) => PokemonEntity.fromJson(e)).toList(),
+          (value) => (value as List)
+              .map((e) => NamedApiResourceEntity.fromJson(e))
+              .toList(),
         );
-
     return listPokemons;
   }
 
-  AsyncResult<List<PokemonEntity>> saveListPokemons(
-      List<PokemonEntity> pokemons) async {
+  AsyncResult<List<NamedApiResourceEntity>> saveListPokemons(
+      List<NamedApiResourceEntity> pokemons) async {
     return _localStorage
         .saveData(_pokemonKey, jsonEncode(pokemons.toString()))
         .pure(pokemons);

@@ -62,22 +62,12 @@ Map<String, dynamic> _$$SpritesImplToJson(_$SpritesImpl instance) =>
 
 _$TypesImpl _$$TypesImplFromJson(Map<String, dynamic> json) => _$TypesImpl(
       slot: (json['slot'] as num).toInt(),
-      type: Type.fromJson(json['type'] as Map<String, dynamic>),
+      type:
+          NamedApiResourceEntity.fromJson(json['type'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$TypesImplToJson(_$TypesImpl instance) =>
     <String, dynamic>{
       'slot': instance.slot,
       'type': instance.type,
-    };
-
-_$TypeImpl _$$TypeImplFromJson(Map<String, dynamic> json) => _$TypeImpl(
-      name: json['name'] as String,
-      url: json['url'] as String,
-    );
-
-Map<String, dynamic> _$$TypeImplToJson(_$TypeImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'url': instance.url,
     };

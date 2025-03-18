@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pokedex/domain/entities/named_api_resource_entity.dart';
 
 part 'pokemon_entity.freezed.dart';
 part 'pokemon_entity.g.dart';
@@ -44,18 +45,8 @@ class Sprites with _$Sprites {
 class Types with _$Types {
   const factory Types({
     required int slot,
-    required Type type,
+    required NamedApiResourceEntity type,
   }) = _Types;
 
   factory Types.fromJson(Map<String, dynamic> json) => _$TypesFromJson(json);
-}
-
-@freezed
-class Type with _$Type {
-  const factory Type({
-    required String name,
-    required String url,
-  }) = _Type;
-
-  factory Type.fromJson(Map<String, dynamic> json) => _$TypeFromJson(json);
 }

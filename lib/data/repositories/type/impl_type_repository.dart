@@ -4,6 +4,7 @@ import 'package:pokedex/data/exceptions/exceptions.dart';
 import 'package:pokedex/data/repositories/type/type_repository.dart';
 import 'package:pokedex/data/services/type/type_client_http.dart';
 import 'package:pokedex/data/services/type/type_local_storage.dart';
+import 'package:pokedex/domain/entities/named_api_resource_entity.dart';
 import 'package:pokedex/domain/entities/type_entity.dart';
 import 'package:result_dart/result_dart.dart';
 
@@ -21,7 +22,7 @@ class ImplTypeRepository implements TypeRepository {
   }
 
   @override
-  AsyncResult<List<TypeRelation>> getListTypes() {
+  AsyncResult<List<NamedApiResourceEntity>> getListTypes() {
     return _typeClientHttp
         .getListTypes()
         .flatMap(_typeLocalStorage.saveListTypes)
@@ -39,7 +40,8 @@ class ImplTypeRepository implements TypeRepository {
   }
 
   /* Auxiliary Functions */
-  AsyncResult<List<TypeRelation>> _recoverListTypes(Exception e) async {
+  AsyncResult<List<NamedApiResourceEntity>> _recoverListTypes(
+      Exception e) async {
     if (e is ClientException) {
       return _typeLocalStorage.getListTypes();
     } else {

@@ -231,17 +231,20 @@ TypeRelationsEntity _$TypeRelationsEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TypeRelationsEntity {
   @JsonKey(name: 'double_damage_from')
-  List<TypeRelation> get doubleDamageFrom => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get doubleDamageFrom =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'double_damage_to')
-  List<TypeRelation> get doubleDamageTo => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get doubleDamageTo =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'half_damage_from')
-  List<TypeRelation> get halfDamageFrom => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get halfDamageFrom =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'half_damage_to')
-  List<TypeRelation> get halsDamageTo => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get halsDamageTo => throw _privateConstructorUsedError;
   @JsonKey(name: 'no_damage_from')
-  List<TypeRelation> get noDamageFrom => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get noDamageFrom => throw _privateConstructorUsedError;
   @JsonKey(name: 'no_damage_to')
-  List<TypeRelation> get noDamageTo => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get noDamageTo => throw _privateConstructorUsedError;
 
   /// Serializes this TypeRelationsEntity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -260,12 +263,20 @@ abstract class $TypeRelationsEntityCopyWith<$Res> {
       _$TypeRelationsEntityCopyWithImpl<$Res, TypeRelationsEntity>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'double_damage_from') List<TypeRelation> doubleDamageFrom,
-      @JsonKey(name: 'double_damage_to') List<TypeRelation> doubleDamageTo,
-      @JsonKey(name: 'half_damage_from') List<TypeRelation> halfDamageFrom,
-      @JsonKey(name: 'half_damage_to') List<TypeRelation> halsDamageTo,
-      @JsonKey(name: 'no_damage_from') List<TypeRelation> noDamageFrom,
-      @JsonKey(name: 'no_damage_to') List<TypeRelation> noDamageTo});
+      {@JsonKey(name: 'double_damage_from')
+      NamedApiResourceEntity doubleDamageFrom,
+      @JsonKey(name: 'double_damage_to') NamedApiResourceEntity doubleDamageTo,
+      @JsonKey(name: 'half_damage_from') NamedApiResourceEntity halfDamageFrom,
+      @JsonKey(name: 'half_damage_to') NamedApiResourceEntity halsDamageTo,
+      @JsonKey(name: 'no_damage_from') NamedApiResourceEntity noDamageFrom,
+      @JsonKey(name: 'no_damage_to') NamedApiResourceEntity noDamageTo});
+
+  $NamedApiResourceEntityCopyWith<$Res> get doubleDamageFrom;
+  $NamedApiResourceEntityCopyWith<$Res> get doubleDamageTo;
+  $NamedApiResourceEntityCopyWith<$Res> get halfDamageFrom;
+  $NamedApiResourceEntityCopyWith<$Res> get halsDamageTo;
+  $NamedApiResourceEntityCopyWith<$Res> get noDamageFrom;
+  $NamedApiResourceEntityCopyWith<$Res> get noDamageTo;
 }
 
 /// @nodoc
@@ -294,28 +305,91 @@ class _$TypeRelationsEntityCopyWithImpl<$Res, $Val extends TypeRelationsEntity>
       doubleDamageFrom: null == doubleDamageFrom
           ? _value.doubleDamageFrom
           : doubleDamageFrom // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       doubleDamageTo: null == doubleDamageTo
           ? _value.doubleDamageTo
           : doubleDamageTo // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       halfDamageFrom: null == halfDamageFrom
           ? _value.halfDamageFrom
           : halfDamageFrom // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       halsDamageTo: null == halsDamageTo
           ? _value.halsDamageTo
           : halsDamageTo // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       noDamageFrom: null == noDamageFrom
           ? _value.noDamageFrom
           : noDamageFrom // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       noDamageTo: null == noDamageTo
           ? _value.noDamageTo
           : noDamageTo // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
     ) as $Val);
+  }
+
+  /// Create a copy of TypeRelationsEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NamedApiResourceEntityCopyWith<$Res> get doubleDamageFrom {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.doubleDamageFrom,
+        (value) {
+      return _then(_value.copyWith(doubleDamageFrom: value) as $Val);
+    });
+  }
+
+  /// Create a copy of TypeRelationsEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NamedApiResourceEntityCopyWith<$Res> get doubleDamageTo {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.doubleDamageTo,
+        (value) {
+      return _then(_value.copyWith(doubleDamageTo: value) as $Val);
+    });
+  }
+
+  /// Create a copy of TypeRelationsEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NamedApiResourceEntityCopyWith<$Res> get halfDamageFrom {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.halfDamageFrom,
+        (value) {
+      return _then(_value.copyWith(halfDamageFrom: value) as $Val);
+    });
+  }
+
+  /// Create a copy of TypeRelationsEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NamedApiResourceEntityCopyWith<$Res> get halsDamageTo {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.halsDamageTo, (value) {
+      return _then(_value.copyWith(halsDamageTo: value) as $Val);
+    });
+  }
+
+  /// Create a copy of TypeRelationsEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NamedApiResourceEntityCopyWith<$Res> get noDamageFrom {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.noDamageFrom, (value) {
+      return _then(_value.copyWith(noDamageFrom: value) as $Val);
+    });
+  }
+
+  /// Create a copy of TypeRelationsEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $NamedApiResourceEntityCopyWith<$Res> get noDamageTo {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.noDamageTo, (value) {
+      return _then(_value.copyWith(noDamageTo: value) as $Val);
+    });
   }
 }
 
@@ -328,12 +402,26 @@ abstract class _$$TypeRelationsEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'double_damage_from') List<TypeRelation> doubleDamageFrom,
-      @JsonKey(name: 'double_damage_to') List<TypeRelation> doubleDamageTo,
-      @JsonKey(name: 'half_damage_from') List<TypeRelation> halfDamageFrom,
-      @JsonKey(name: 'half_damage_to') List<TypeRelation> halsDamageTo,
-      @JsonKey(name: 'no_damage_from') List<TypeRelation> noDamageFrom,
-      @JsonKey(name: 'no_damage_to') List<TypeRelation> noDamageTo});
+      {@JsonKey(name: 'double_damage_from')
+      NamedApiResourceEntity doubleDamageFrom,
+      @JsonKey(name: 'double_damage_to') NamedApiResourceEntity doubleDamageTo,
+      @JsonKey(name: 'half_damage_from') NamedApiResourceEntity halfDamageFrom,
+      @JsonKey(name: 'half_damage_to') NamedApiResourceEntity halsDamageTo,
+      @JsonKey(name: 'no_damage_from') NamedApiResourceEntity noDamageFrom,
+      @JsonKey(name: 'no_damage_to') NamedApiResourceEntity noDamageTo});
+
+  @override
+  $NamedApiResourceEntityCopyWith<$Res> get doubleDamageFrom;
+  @override
+  $NamedApiResourceEntityCopyWith<$Res> get doubleDamageTo;
+  @override
+  $NamedApiResourceEntityCopyWith<$Res> get halfDamageFrom;
+  @override
+  $NamedApiResourceEntityCopyWith<$Res> get halsDamageTo;
+  @override
+  $NamedApiResourceEntityCopyWith<$Res> get noDamageFrom;
+  @override
+  $NamedApiResourceEntityCopyWith<$Res> get noDamageTo;
 }
 
 /// @nodoc
@@ -358,29 +446,29 @@ class __$$TypeRelationsEntityImplCopyWithImpl<$Res>
   }) {
     return _then(_$TypeRelationsEntityImpl(
       doubleDamageFrom: null == doubleDamageFrom
-          ? _value._doubleDamageFrom
+          ? _value.doubleDamageFrom
           : doubleDamageFrom // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       doubleDamageTo: null == doubleDamageTo
-          ? _value._doubleDamageTo
+          ? _value.doubleDamageTo
           : doubleDamageTo // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       halfDamageFrom: null == halfDamageFrom
-          ? _value._halfDamageFrom
+          ? _value.halfDamageFrom
           : halfDamageFrom // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       halsDamageTo: null == halsDamageTo
-          ? _value._halsDamageTo
+          ? _value.halsDamageTo
           : halsDamageTo // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       noDamageFrom: null == noDamageFrom
-          ? _value._noDamageFrom
+          ? _value.noDamageFrom
           : noDamageFrom // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
       noDamageTo: null == noDamageTo
-          ? _value._noDamageTo
+          ? _value.noDamageTo
           : noDamageTo // ignore: cast_nullable_to_non_nullable
-              as List<TypeRelation>,
+              as NamedApiResourceEntity,
     ));
   }
 }
@@ -389,82 +477,34 @@ class __$$TypeRelationsEntityImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TypeRelationsEntityImpl implements _TypeRelationsEntity {
   const _$TypeRelationsEntityImpl(
-      {@JsonKey(name: 'double_damage_from')
-      required final List<TypeRelation> doubleDamageFrom,
-      @JsonKey(name: 'double_damage_to')
-      required final List<TypeRelation> doubleDamageTo,
-      @JsonKey(name: 'half_damage_from')
-      required final List<TypeRelation> halfDamageFrom,
-      @JsonKey(name: 'half_damage_to')
-      required final List<TypeRelation> halsDamageTo,
-      @JsonKey(name: 'no_damage_from')
-      required final List<TypeRelation> noDamageFrom,
-      @JsonKey(name: 'no_damage_to')
-      required final List<TypeRelation> noDamageTo})
-      : _doubleDamageFrom = doubleDamageFrom,
-        _doubleDamageTo = doubleDamageTo,
-        _halfDamageFrom = halfDamageFrom,
-        _halsDamageTo = halsDamageTo,
-        _noDamageFrom = noDamageFrom,
-        _noDamageTo = noDamageTo;
+      {@JsonKey(name: 'double_damage_from') required this.doubleDamageFrom,
+      @JsonKey(name: 'double_damage_to') required this.doubleDamageTo,
+      @JsonKey(name: 'half_damage_from') required this.halfDamageFrom,
+      @JsonKey(name: 'half_damage_to') required this.halsDamageTo,
+      @JsonKey(name: 'no_damage_from') required this.noDamageFrom,
+      @JsonKey(name: 'no_damage_to') required this.noDamageTo});
 
   factory _$TypeRelationsEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$TypeRelationsEntityImplFromJson(json);
 
-  final List<TypeRelation> _doubleDamageFrom;
   @override
   @JsonKey(name: 'double_damage_from')
-  List<TypeRelation> get doubleDamageFrom {
-    if (_doubleDamageFrom is EqualUnmodifiableListView)
-      return _doubleDamageFrom;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_doubleDamageFrom);
-  }
-
-  final List<TypeRelation> _doubleDamageTo;
+  final NamedApiResourceEntity doubleDamageFrom;
   @override
   @JsonKey(name: 'double_damage_to')
-  List<TypeRelation> get doubleDamageTo {
-    if (_doubleDamageTo is EqualUnmodifiableListView) return _doubleDamageTo;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_doubleDamageTo);
-  }
-
-  final List<TypeRelation> _halfDamageFrom;
+  final NamedApiResourceEntity doubleDamageTo;
   @override
   @JsonKey(name: 'half_damage_from')
-  List<TypeRelation> get halfDamageFrom {
-    if (_halfDamageFrom is EqualUnmodifiableListView) return _halfDamageFrom;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_halfDamageFrom);
-  }
-
-  final List<TypeRelation> _halsDamageTo;
+  final NamedApiResourceEntity halfDamageFrom;
   @override
   @JsonKey(name: 'half_damage_to')
-  List<TypeRelation> get halsDamageTo {
-    if (_halsDamageTo is EqualUnmodifiableListView) return _halsDamageTo;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_halsDamageTo);
-  }
-
-  final List<TypeRelation> _noDamageFrom;
+  final NamedApiResourceEntity halsDamageTo;
   @override
   @JsonKey(name: 'no_damage_from')
-  List<TypeRelation> get noDamageFrom {
-    if (_noDamageFrom is EqualUnmodifiableListView) return _noDamageFrom;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_noDamageFrom);
-  }
-
-  final List<TypeRelation> _noDamageTo;
+  final NamedApiResourceEntity noDamageFrom;
   @override
   @JsonKey(name: 'no_damage_to')
-  List<TypeRelation> get noDamageTo {
-    if (_noDamageTo is EqualUnmodifiableListView) return _noDamageTo;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_noDamageTo);
-  }
+  final NamedApiResourceEntity noDamageTo;
 
   @override
   String toString() {
@@ -476,30 +516,24 @@ class _$TypeRelationsEntityImpl implements _TypeRelationsEntity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TypeRelationsEntityImpl &&
-            const DeepCollectionEquality()
-                .equals(other._doubleDamageFrom, _doubleDamageFrom) &&
-            const DeepCollectionEquality()
-                .equals(other._doubleDamageTo, _doubleDamageTo) &&
-            const DeepCollectionEquality()
-                .equals(other._halfDamageFrom, _halfDamageFrom) &&
-            const DeepCollectionEquality()
-                .equals(other._halsDamageTo, _halsDamageTo) &&
-            const DeepCollectionEquality()
-                .equals(other._noDamageFrom, _noDamageFrom) &&
-            const DeepCollectionEquality()
-                .equals(other._noDamageTo, _noDamageTo));
+            (identical(other.doubleDamageFrom, doubleDamageFrom) ||
+                other.doubleDamageFrom == doubleDamageFrom) &&
+            (identical(other.doubleDamageTo, doubleDamageTo) ||
+                other.doubleDamageTo == doubleDamageTo) &&
+            (identical(other.halfDamageFrom, halfDamageFrom) ||
+                other.halfDamageFrom == halfDamageFrom) &&
+            (identical(other.halsDamageTo, halsDamageTo) ||
+                other.halsDamageTo == halsDamageTo) &&
+            (identical(other.noDamageFrom, noDamageFrom) ||
+                other.noDamageFrom == noDamageFrom) &&
+            (identical(other.noDamageTo, noDamageTo) ||
+                other.noDamageTo == noDamageTo));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_doubleDamageFrom),
-      const DeepCollectionEquality().hash(_doubleDamageTo),
-      const DeepCollectionEquality().hash(_halfDamageFrom),
-      const DeepCollectionEquality().hash(_halsDamageTo),
-      const DeepCollectionEquality().hash(_noDamageFrom),
-      const DeepCollectionEquality().hash(_noDamageTo));
+  int get hashCode => Object.hash(runtimeType, doubleDamageFrom, doubleDamageTo,
+      halfDamageFrom, halsDamageTo, noDamageFrom, noDamageTo);
 
   /// Create a copy of TypeRelationsEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -521,17 +555,17 @@ class _$TypeRelationsEntityImpl implements _TypeRelationsEntity {
 abstract class _TypeRelationsEntity implements TypeRelationsEntity {
   const factory _TypeRelationsEntity(
           {@JsonKey(name: 'double_damage_from')
-          required final List<TypeRelation> doubleDamageFrom,
+          required final NamedApiResourceEntity doubleDamageFrom,
           @JsonKey(name: 'double_damage_to')
-          required final List<TypeRelation> doubleDamageTo,
+          required final NamedApiResourceEntity doubleDamageTo,
           @JsonKey(name: 'half_damage_from')
-          required final List<TypeRelation> halfDamageFrom,
+          required final NamedApiResourceEntity halfDamageFrom,
           @JsonKey(name: 'half_damage_to')
-          required final List<TypeRelation> halsDamageTo,
+          required final NamedApiResourceEntity halsDamageTo,
           @JsonKey(name: 'no_damage_from')
-          required final List<TypeRelation> noDamageFrom,
+          required final NamedApiResourceEntity noDamageFrom,
           @JsonKey(name: 'no_damage_to')
-          required final List<TypeRelation> noDamageTo}) =
+          required final NamedApiResourceEntity noDamageTo}) =
       _$TypeRelationsEntityImpl;
 
   factory _TypeRelationsEntity.fromJson(Map<String, dynamic> json) =
@@ -539,194 +573,27 @@ abstract class _TypeRelationsEntity implements TypeRelationsEntity {
 
   @override
   @JsonKey(name: 'double_damage_from')
-  List<TypeRelation> get doubleDamageFrom;
+  NamedApiResourceEntity get doubleDamageFrom;
   @override
   @JsonKey(name: 'double_damage_to')
-  List<TypeRelation> get doubleDamageTo;
+  NamedApiResourceEntity get doubleDamageTo;
   @override
   @JsonKey(name: 'half_damage_from')
-  List<TypeRelation> get halfDamageFrom;
+  NamedApiResourceEntity get halfDamageFrom;
   @override
   @JsonKey(name: 'half_damage_to')
-  List<TypeRelation> get halsDamageTo;
+  NamedApiResourceEntity get halsDamageTo;
   @override
   @JsonKey(name: 'no_damage_from')
-  List<TypeRelation> get noDamageFrom;
+  NamedApiResourceEntity get noDamageFrom;
   @override
   @JsonKey(name: 'no_damage_to')
-  List<TypeRelation> get noDamageTo;
+  NamedApiResourceEntity get noDamageTo;
 
   /// Create a copy of TypeRelationsEntity
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TypeRelationsEntityImplCopyWith<_$TypeRelationsEntityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-TypeRelation _$TypeRelationFromJson(Map<String, dynamic> json) {
-  return _TypeRelation.fromJson(json);
-}
-
-/// @nodoc
-mixin _$TypeRelation {
-  String get name => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
-
-  /// Serializes this TypeRelation to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TypeRelation
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $TypeRelationCopyWith<TypeRelation> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TypeRelationCopyWith<$Res> {
-  factory $TypeRelationCopyWith(
-          TypeRelation value, $Res Function(TypeRelation) then) =
-      _$TypeRelationCopyWithImpl<$Res, TypeRelation>;
-  @useResult
-  $Res call({String name, String url});
-}
-
-/// @nodoc
-class _$TypeRelationCopyWithImpl<$Res, $Val extends TypeRelation>
-    implements $TypeRelationCopyWith<$Res> {
-  _$TypeRelationCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of TypeRelation
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? url = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$TypeRelationImplCopyWith<$Res>
-    implements $TypeRelationCopyWith<$Res> {
-  factory _$$TypeRelationImplCopyWith(
-          _$TypeRelationImpl value, $Res Function(_$TypeRelationImpl) then) =
-      __$$TypeRelationImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String name, String url});
-}
-
-/// @nodoc
-class __$$TypeRelationImplCopyWithImpl<$Res>
-    extends _$TypeRelationCopyWithImpl<$Res, _$TypeRelationImpl>
-    implements _$$TypeRelationImplCopyWith<$Res> {
-  __$$TypeRelationImplCopyWithImpl(
-      _$TypeRelationImpl _value, $Res Function(_$TypeRelationImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TypeRelation
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? url = null,
-  }) {
-    return _then(_$TypeRelationImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$TypeRelationImpl implements _TypeRelation {
-  const _$TypeRelationImpl({required this.name, required this.url});
-
-  factory _$TypeRelationImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TypeRelationImplFromJson(json);
-
-  @override
-  final String name;
-  @override
-  final String url;
-
-  @override
-  String toString() {
-    return 'TypeRelation(name: $name, url: $url)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$TypeRelationImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, name, url);
-
-  /// Create a copy of TypeRelation
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$TypeRelationImplCopyWith<_$TypeRelationImpl> get copyWith =>
-      __$$TypeRelationImplCopyWithImpl<_$TypeRelationImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TypeRelationImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _TypeRelation implements TypeRelation {
-  const factory _TypeRelation(
-      {required final String name,
-      required final String url}) = _$TypeRelationImpl;
-
-  factory _TypeRelation.fromJson(Map<String, dynamic> json) =
-      _$TypeRelationImpl.fromJson;
-
-  @override
-  String get name;
-  @override
-  String get url;
-
-  /// Create a copy of TypeRelation
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TypeRelationImplCopyWith<_$TypeRelationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

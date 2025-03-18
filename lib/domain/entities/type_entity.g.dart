@@ -25,24 +25,18 @@ Map<String, dynamic> _$$TypeEntityImplToJson(_$TypeEntityImpl instance) =>
 _$TypeRelationsEntityImpl _$$TypeRelationsEntityImplFromJson(
         Map<String, dynamic> json) =>
     _$TypeRelationsEntityImpl(
-      doubleDamageFrom: (json['double_damage_from'] as List<dynamic>)
-          .map((e) => TypeRelation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      doubleDamageTo: (json['double_damage_to'] as List<dynamic>)
-          .map((e) => TypeRelation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      halfDamageFrom: (json['half_damage_from'] as List<dynamic>)
-          .map((e) => TypeRelation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      halsDamageTo: (json['half_damage_to'] as List<dynamic>)
-          .map((e) => TypeRelation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      noDamageFrom: (json['no_damage_from'] as List<dynamic>)
-          .map((e) => TypeRelation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      noDamageTo: (json['no_damage_to'] as List<dynamic>)
-          .map((e) => TypeRelation.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      doubleDamageFrom: NamedApiResourceEntity.fromJson(
+          json['double_damage_from'] as Map<String, dynamic>),
+      doubleDamageTo: NamedApiResourceEntity.fromJson(
+          json['double_damage_to'] as Map<String, dynamic>),
+      halfDamageFrom: NamedApiResourceEntity.fromJson(
+          json['half_damage_from'] as Map<String, dynamic>),
+      halsDamageTo: NamedApiResourceEntity.fromJson(
+          json['half_damage_to'] as Map<String, dynamic>),
+      noDamageFrom: NamedApiResourceEntity.fromJson(
+          json['no_damage_from'] as Map<String, dynamic>),
+      noDamageTo: NamedApiResourceEntity.fromJson(
+          json['no_damage_to'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$TypeRelationsEntityImplToJson(
@@ -54,16 +48,4 @@ Map<String, dynamic> _$$TypeRelationsEntityImplToJson(
       'half_damage_to': instance.halsDamageTo,
       'no_damage_from': instance.noDamageFrom,
       'no_damage_to': instance.noDamageTo,
-    };
-
-_$TypeRelationImpl _$$TypeRelationImplFromJson(Map<String, dynamic> json) =>
-    _$TypeRelationImpl(
-      name: json['name'] as String,
-      url: json['url'] as String,
-    );
-
-Map<String, dynamic> _$$TypeRelationImplToJson(_$TypeRelationImpl instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'url': instance.url,
     };

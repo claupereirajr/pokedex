@@ -21,7 +21,7 @@ LocationEntity _$LocationEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LocationEntity {
   @JsonKey(name: "location_area")
-  LocationAreaEntity get locationArea => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get locationArea => throw _privateConstructorUsedError;
   @JsonKey(name: "version_details")
   List<VersionDetailEntity> get versionDetail =>
       throw _privateConstructorUsedError;
@@ -43,11 +43,11 @@ abstract class $LocationEntityCopyWith<$Res> {
       _$LocationEntityCopyWithImpl<$Res, LocationEntity>;
   @useResult
   $Res call(
-      {@JsonKey(name: "location_area") LocationAreaEntity locationArea,
+      {@JsonKey(name: "location_area") NamedApiResourceEntity locationArea,
       @JsonKey(name: "version_details")
       List<VersionDetailEntity> versionDetail});
 
-  $LocationAreaEntityCopyWith<$Res> get locationArea;
+  $NamedApiResourceEntityCopyWith<$Res> get locationArea;
 }
 
 /// @nodoc
@@ -72,7 +72,7 @@ class _$LocationEntityCopyWithImpl<$Res, $Val extends LocationEntity>
       locationArea: null == locationArea
           ? _value.locationArea
           : locationArea // ignore: cast_nullable_to_non_nullable
-              as LocationAreaEntity,
+              as NamedApiResourceEntity,
       versionDetail: null == versionDetail
           ? _value.versionDetail
           : versionDetail // ignore: cast_nullable_to_non_nullable
@@ -84,8 +84,8 @@ class _$LocationEntityCopyWithImpl<$Res, $Val extends LocationEntity>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $LocationAreaEntityCopyWith<$Res> get locationArea {
-    return $LocationAreaEntityCopyWith<$Res>(_value.locationArea, (value) {
+  $NamedApiResourceEntityCopyWith<$Res> get locationArea {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.locationArea, (value) {
       return _then(_value.copyWith(locationArea: value) as $Val);
     });
   }
@@ -100,12 +100,12 @@ abstract class _$$LocationEntityImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "location_area") LocationAreaEntity locationArea,
+      {@JsonKey(name: "location_area") NamedApiResourceEntity locationArea,
       @JsonKey(name: "version_details")
       List<VersionDetailEntity> versionDetail});
 
   @override
-  $LocationAreaEntityCopyWith<$Res> get locationArea;
+  $NamedApiResourceEntityCopyWith<$Res> get locationArea;
 }
 
 /// @nodoc
@@ -128,7 +128,7 @@ class __$$LocationEntityImplCopyWithImpl<$Res>
       locationArea: null == locationArea
           ? _value.locationArea
           : locationArea // ignore: cast_nullable_to_non_nullable
-              as LocationAreaEntity,
+              as NamedApiResourceEntity,
       versionDetail: null == versionDetail
           ? _value._versionDetail
           : versionDetail // ignore: cast_nullable_to_non_nullable
@@ -151,7 +151,7 @@ class _$LocationEntityImpl implements _LocationEntity {
 
   @override
   @JsonKey(name: "location_area")
-  final LocationAreaEntity locationArea;
+  final NamedApiResourceEntity locationArea;
   final List<VersionDetailEntity> _versionDetail;
   @override
   @JsonKey(name: "version_details")
@@ -202,7 +202,7 @@ class _$LocationEntityImpl implements _LocationEntity {
 abstract class _LocationEntity implements LocationEntity {
   const factory _LocationEntity(
           {@JsonKey(name: "location_area")
-          required final LocationAreaEntity locationArea,
+          required final NamedApiResourceEntity locationArea,
           @JsonKey(name: "version_details")
           required final List<VersionDetailEntity> versionDetail}) =
       _$LocationEntityImpl;
@@ -212,7 +212,7 @@ abstract class _LocationEntity implements LocationEntity {
 
   @override
   @JsonKey(name: "location_area")
-  LocationAreaEntity get locationArea;
+  NamedApiResourceEntity get locationArea;
   @override
   @JsonKey(name: "version_details")
   List<VersionDetailEntity> get versionDetail;
@@ -222,185 +222,6 @@ abstract class _LocationEntity implements LocationEntity {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationEntityImplCopyWith<_$LocationEntityImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-LocationAreaEntity _$LocationAreaEntityFromJson(Map<String, dynamic> json) {
-  return _LocationAreaEntity.fromJson(json);
-}
-
-/// @nodoc
-mixin _$LocationAreaEntity {
-  @JsonKey(name: "name")
-  String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: "url")
-  String get url => throw _privateConstructorUsedError;
-
-  /// Serializes this LocationAreaEntity to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of LocationAreaEntity
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LocationAreaEntityCopyWith<LocationAreaEntity> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $LocationAreaEntityCopyWith<$Res> {
-  factory $LocationAreaEntityCopyWith(
-          LocationAreaEntity value, $Res Function(LocationAreaEntity) then) =
-      _$LocationAreaEntityCopyWithImpl<$Res, LocationAreaEntity>;
-  @useResult
-  $Res call(
-      {@JsonKey(name: "name") String name, @JsonKey(name: "url") String url});
-}
-
-/// @nodoc
-class _$LocationAreaEntityCopyWithImpl<$Res, $Val extends LocationAreaEntity>
-    implements $LocationAreaEntityCopyWith<$Res> {
-  _$LocationAreaEntityCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of LocationAreaEntity
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? url = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$LocationAreaEntityImplCopyWith<$Res>
-    implements $LocationAreaEntityCopyWith<$Res> {
-  factory _$$LocationAreaEntityImplCopyWith(_$LocationAreaEntityImpl value,
-          $Res Function(_$LocationAreaEntityImpl) then) =
-      __$$LocationAreaEntityImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {@JsonKey(name: "name") String name, @JsonKey(name: "url") String url});
-}
-
-/// @nodoc
-class __$$LocationAreaEntityImplCopyWithImpl<$Res>
-    extends _$LocationAreaEntityCopyWithImpl<$Res, _$LocationAreaEntityImpl>
-    implements _$$LocationAreaEntityImplCopyWith<$Res> {
-  __$$LocationAreaEntityImplCopyWithImpl(_$LocationAreaEntityImpl _value,
-      $Res Function(_$LocationAreaEntityImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of LocationAreaEntity
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-    Object? url = null,
-  }) {
-    return _then(_$LocationAreaEntityImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$LocationAreaEntityImpl implements _LocationAreaEntity {
-  const _$LocationAreaEntityImpl(
-      {@JsonKey(name: "name") required this.name,
-      @JsonKey(name: "url") required this.url});
-
-  factory _$LocationAreaEntityImpl.fromJson(Map<String, dynamic> json) =>
-      _$$LocationAreaEntityImplFromJson(json);
-
-  @override
-  @JsonKey(name: "name")
-  final String name;
-  @override
-  @JsonKey(name: "url")
-  final String url;
-
-  @override
-  String toString() {
-    return 'LocationAreaEntity(name: $name, url: $url)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LocationAreaEntityImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.url, url) || other.url == url));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, name, url);
-
-  /// Create a copy of LocationAreaEntity
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LocationAreaEntityImplCopyWith<_$LocationAreaEntityImpl> get copyWith =>
-      __$$LocationAreaEntityImplCopyWithImpl<_$LocationAreaEntityImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$LocationAreaEntityImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _LocationAreaEntity implements LocationAreaEntity {
-  const factory _LocationAreaEntity(
-          {@JsonKey(name: "name") required final String name,
-          @JsonKey(name: "url") required final String url}) =
-      _$LocationAreaEntityImpl;
-
-  factory _LocationAreaEntity.fromJson(Map<String, dynamic> json) =
-      _$LocationAreaEntityImpl.fromJson;
-
-  @override
-  @JsonKey(name: "name")
-  String get name;
-  @override
-  @JsonKey(name: "url")
-  String get url;
-
-  /// Create a copy of LocationAreaEntity
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LocationAreaEntityImplCopyWith<_$LocationAreaEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -416,7 +237,7 @@ mixin _$VersionDetailEntity {
   @JsonKey(name: "max_chance")
   int get maxChance => throw _privateConstructorUsedError;
   @JsonKey(name: "version")
-  LocationAreaEntity get version => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get version => throw _privateConstructorUsedError;
 
   /// Serializes this VersionDetailEntity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -438,9 +259,9 @@ abstract class $VersionDetailEntityCopyWith<$Res> {
       {@JsonKey(name: "encounter_details")
       List<EncounterDetailEntity> encounterDetail,
       @JsonKey(name: "max_chance") int maxChance,
-      @JsonKey(name: "version") LocationAreaEntity version});
+      @JsonKey(name: "version") NamedApiResourceEntity version});
 
-  $LocationAreaEntityCopyWith<$Res> get version;
+  $NamedApiResourceEntityCopyWith<$Res> get version;
 }
 
 /// @nodoc
@@ -474,7 +295,7 @@ class _$VersionDetailEntityCopyWithImpl<$Res, $Val extends VersionDetailEntity>
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as LocationAreaEntity,
+              as NamedApiResourceEntity,
     ) as $Val);
   }
 
@@ -482,8 +303,8 @@ class _$VersionDetailEntityCopyWithImpl<$Res, $Val extends VersionDetailEntity>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $LocationAreaEntityCopyWith<$Res> get version {
-    return $LocationAreaEntityCopyWith<$Res>(_value.version, (value) {
+  $NamedApiResourceEntityCopyWith<$Res> get version {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.version, (value) {
       return _then(_value.copyWith(version: value) as $Val);
     });
   }
@@ -501,10 +322,10 @@ abstract class _$$VersionDetailEntityImplCopyWith<$Res>
       {@JsonKey(name: "encounter_details")
       List<EncounterDetailEntity> encounterDetail,
       @JsonKey(name: "max_chance") int maxChance,
-      @JsonKey(name: "version") LocationAreaEntity version});
+      @JsonKey(name: "version") NamedApiResourceEntity version});
 
   @override
-  $LocationAreaEntityCopyWith<$Res> get version;
+  $NamedApiResourceEntityCopyWith<$Res> get version;
 }
 
 /// @nodoc
@@ -536,7 +357,7 @@ class __$$VersionDetailEntityImplCopyWithImpl<$Res>
       version: null == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
-              as LocationAreaEntity,
+              as NamedApiResourceEntity,
     ));
   }
 }
@@ -568,7 +389,7 @@ class _$VersionDetailEntityImpl implements _VersionDetailEntity {
   final int maxChance;
   @override
   @JsonKey(name: "version")
-  final LocationAreaEntity version;
+  final NamedApiResourceEntity version;
 
   @override
   String toString() {
@@ -614,11 +435,12 @@ class _$VersionDetailEntityImpl implements _VersionDetailEntity {
 
 abstract class _VersionDetailEntity implements VersionDetailEntity {
   const factory _VersionDetailEntity(
-      {@JsonKey(name: "encounter_details")
-      required final List<EncounterDetailEntity> encounterDetail,
-      @JsonKey(name: "max_chance") required final int maxChance,
-      @JsonKey(name: "version")
-      required final LocationAreaEntity version}) = _$VersionDetailEntityImpl;
+          {@JsonKey(name: "encounter_details")
+          required final List<EncounterDetailEntity> encounterDetail,
+          @JsonKey(name: "max_chance") required final int maxChance,
+          @JsonKey(name: "version")
+          required final NamedApiResourceEntity version}) =
+      _$VersionDetailEntityImpl;
 
   factory _VersionDetailEntity.fromJson(Map<String, dynamic> json) =
       _$VersionDetailEntityImpl.fromJson;
@@ -631,7 +453,7 @@ abstract class _VersionDetailEntity implements VersionDetailEntity {
   int get maxChance;
   @override
   @JsonKey(name: "version")
-  LocationAreaEntity get version;
+  NamedApiResourceEntity get version;
 
   /// Create a copy of VersionDetailEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -655,7 +477,7 @@ mixin _$EncounterDetailEntity {
   @JsonKey(name: "max_level")
   int get maxLevel => throw _privateConstructorUsedError;
   @JsonKey(name: "method")
-  LocationAreaEntity get method => throw _privateConstructorUsedError;
+  NamedApiResourceEntity get method => throw _privateConstructorUsedError;
   @JsonKey(name: "min_level")
   int get minLevel => throw _privateConstructorUsedError;
 
@@ -679,10 +501,10 @@ abstract class $EncounterDetailEntityCopyWith<$Res> {
       {@JsonKey(name: "chance") int chance,
       @JsonKey(name: "condition_values") List<dynamic> conditionValues,
       @JsonKey(name: "max_level") int maxLevel,
-      @JsonKey(name: "method") LocationAreaEntity method,
+      @JsonKey(name: "method") NamedApiResourceEntity method,
       @JsonKey(name: "min_level") int minLevel});
 
-  $LocationAreaEntityCopyWith<$Res> get method;
+  $NamedApiResourceEntityCopyWith<$Res> get method;
 }
 
 /// @nodoc
@@ -723,7 +545,7 @@ class _$EncounterDetailEntityCopyWithImpl<$Res,
       method: null == method
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as LocationAreaEntity,
+              as NamedApiResourceEntity,
       minLevel: null == minLevel
           ? _value.minLevel
           : minLevel // ignore: cast_nullable_to_non_nullable
@@ -735,8 +557,8 @@ class _$EncounterDetailEntityCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $LocationAreaEntityCopyWith<$Res> get method {
-    return $LocationAreaEntityCopyWith<$Res>(_value.method, (value) {
+  $NamedApiResourceEntityCopyWith<$Res> get method {
+    return $NamedApiResourceEntityCopyWith<$Res>(_value.method, (value) {
       return _then(_value.copyWith(method: value) as $Val);
     });
   }
@@ -755,11 +577,11 @@ abstract class _$$EncounterDetailEntityImplCopyWith<$Res>
       {@JsonKey(name: "chance") int chance,
       @JsonKey(name: "condition_values") List<dynamic> conditionValues,
       @JsonKey(name: "max_level") int maxLevel,
-      @JsonKey(name: "method") LocationAreaEntity method,
+      @JsonKey(name: "method") NamedApiResourceEntity method,
       @JsonKey(name: "min_level") int minLevel});
 
   @override
-  $LocationAreaEntityCopyWith<$Res> get method;
+  $NamedApiResourceEntityCopyWith<$Res> get method;
 }
 
 /// @nodoc
@@ -798,7 +620,7 @@ class __$$EncounterDetailEntityImplCopyWithImpl<$Res>
       method: null == method
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as LocationAreaEntity,
+              as NamedApiResourceEntity,
       minLevel: null == minLevel
           ? _value.minLevel
           : minLevel // ignore: cast_nullable_to_non_nullable
@@ -839,7 +661,7 @@ class _$EncounterDetailEntityImpl implements _EncounterDetailEntity {
   final int maxLevel;
   @override
   @JsonKey(name: "method")
-  final LocationAreaEntity method;
+  final NamedApiResourceEntity method;
   @override
   @JsonKey(name: "min_level")
   final int minLevel;
@@ -897,7 +719,7 @@ abstract class _EncounterDetailEntity implements EncounterDetailEntity {
           @JsonKey(name: "condition_values")
           required final List<dynamic> conditionValues,
           @JsonKey(name: "max_level") required final int maxLevel,
-          @JsonKey(name: "method") required final LocationAreaEntity method,
+          @JsonKey(name: "method") required final NamedApiResourceEntity method,
           @JsonKey(name: "min_level") required final int minLevel}) =
       _$EncounterDetailEntityImpl;
 
@@ -915,7 +737,7 @@ abstract class _EncounterDetailEntity implements EncounterDetailEntity {
   int get maxLevel;
   @override
   @JsonKey(name: "method")
-  LocationAreaEntity get method;
+  NamedApiResourceEntity get method;
   @override
   @JsonKey(name: "min_level")
   int get minLevel;

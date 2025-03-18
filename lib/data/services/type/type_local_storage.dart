@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:pokedex/data/services/local_storage.dart';
+import 'package:pokedex/domain/entities/named_api_resource_entity.dart';
 import 'package:pokedex/domain/entities/type_entity.dart';
 import 'package:result_dart/result_dart.dart';
 
@@ -18,16 +19,17 @@ class TypeLocalStorage {
         );
   }
 
-  AsyncResult<List<TypeRelation>> getListTypes() async {
+  AsyncResult<List<NamedApiResourceEntity>> getListTypes() async {
     final listTypes = _localStorage.getData(_typeKey).map(
-          (value) =>
-              (value as List).map((e) => TypeRelation.fromJson(e)).toList(),
+          (value) => (value as List)
+              .map((e) => NamedApiResourceEntity.fromJson(e))
+              .toList(),
         );
     return listTypes;
   }
 
-  AsyncResult<List<TypeRelation>> saveListTypes(
-      List<TypeRelation> types) async {
+  AsyncResult<List<NamedApiResourceEntity>> saveListTypes(
+      List<NamedApiResourceEntity> types) async {
     return _localStorage
         .saveData(_typeKey, jsonEncode(types.toString()))
         .pure(types);
