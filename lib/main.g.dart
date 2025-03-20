@@ -4,13 +4,43 @@ part of 'main.dart';
 
 List<RouteEntity> get routes => [
       RouteEntity(
+        key: '/pokemon/pokemons',
+        uri: Uri.parse('/pokemon/pokemons'),
+        routeBuilder: b0Builder,
+      ),
+      RouteEntity(
+        key: '/pokemon/[id]/pokemon',
+        uri: Uri.parse('/pokemon/[id]/pokemon'),
+        routeBuilder: b1Builder,
+      ),
+      RouteEntity(
+        key: '/type',
+        uri: Uri.parse('/type'),
+        routeBuilder: b2Builder,
+      ),
+      RouteEntity(
         key: '/splash',
         uri: Uri.parse('/splash'),
-        routeBuilder: b0Builder,
+        routeBuilder: b3Builder,
+      ),
+      RouteEntity(
+        key: '/home',
+        uri: Uri.parse('/home'),
+        routeBuilder: b4Builder,
       ),
     ];
 
 const routePaths = (
   path: '/',
+  pokemon: (
+    path: '/pokemon',
+    pokemons: '/pokemon/pokemons',
+    $id: (
+      path: '/pokemon/[id]',
+      pokemon: '/pokemon/[id]/pokemon',
+    ),
+  ),
+  type: '/type',
   splash: '/splash',
+  home: '/home',
 );
