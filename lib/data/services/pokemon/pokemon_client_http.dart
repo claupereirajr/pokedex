@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:pokedex/data/exceptions/exceptions.dart';
 import 'package:pokedex/data/services/client_http.dart';

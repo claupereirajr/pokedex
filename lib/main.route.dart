@@ -3,39 +3,32 @@
 import 'package:flutter/widgets.dart';
 import 'package:routefly/routefly.dart';
 
-import 'ui/home/home_page.dart' as a4;
-import 'ui/pokemon/[id]/pokemon_page.dart' as a1;
-import 'ui/pokemon/pokemons_page.dart' as a0;
-import 'ui/splash/splash_page.dart' as a3;
-import 'ui/type/type_page.dart' as a2;
+import 'ui/home/home_page.dart' as a3;
+import 'ui/pokemon/[id]_page.dart' as a0;
+import 'ui/splash/splash_page.dart' as a2;
+import 'ui/type/type_page.dart' as a1;
 
 Route b0Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a0.PokemonsPage(),
+      const a0.PokemonPage(),
     );
 Route b1Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a1.PokemonPage(),
+      const a1.TypePage(),
     );
 Route b2Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a2.TypePage(),
+      const a2.SplashPage(),
     );
 Route b3Builder(BuildContext ctx, RouteSettings settings) =>
     Routefly.defaultRouteBuilder(
       ctx,
       settings,
-      const a3.SplashPage(),
-    );
-Route b4Builder(BuildContext ctx, RouteSettings settings) =>
-    Routefly.defaultRouteBuilder(
-      ctx,
-      settings,
-      const a4.HomePage(),
+      const a3.HomePage(),
     );

@@ -17,7 +17,10 @@ class ImplPokemonRepository implements PokemonRepository {
 
   @override
   AsyncResult<PokemonEntity> getPokemon(int id) {
-    return _pokemonClientHttp.getPokemon(id);
+    return _pokemonClientHttp
+        .getPokemon(id)
+        .flatMap(_pokemonLocalStorage.savePokemon)
+        .recover((e) => _recoverPokemon(e, id));
   }
 
   @override
@@ -42,6 +45,14 @@ class ImplPokemonRepository implements PokemonRepository {
   AsyncResult<List<PokemonEntity>> _recoverListPokemons(Exception e) async {
     if (e is ClientException) {
       return _pokemonLocalStorage.getListPokemons();
+    } else {
+      return Failure(e);
+    }
+  }
+
+  AsyncResult<PokemonEntity> _recoverPokemon(Exception e, int id) async {
+    if (e is ClientException) {
+      return _pokemonLocalStorage.getPokemon(id);
     } else {
       return Failure(e);
     }

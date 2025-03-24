@@ -3,6 +3,7 @@ import 'package:pokedex/config/dependencies.dart';
 import 'package:pokedex/ui/components/custom_appbar.dart';
 import 'package:pokedex/ui/components/custom_bottomNavigationBar.dart';
 import 'package:pokedex/ui/home/controllers/home_controller.dart';
+import 'package:routefly/routefly.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -83,38 +84,43 @@ class _HomePageState extends State<HomePage> {
                       'fairy' => Colors.pinkAccent,
                       _ => Colors.grey,
                     };
-                    return Card(
-                      color: pokemonType,
-                      child: Stack(
-                        children: [
-                          Align(
-                            alignment: Alignment.bottomRight,
-                            child: Image.network(
-                              pokemon?.sprites.frontDefault ?? '',
-                              fit: BoxFit.cover,
-                              height: 100.0,
-                              width: 100.0,
-                            ),
-                          ),
-                          ListTile(
-                            title: Text(
-                              pokemon?.name.toUpperCase() ?? '',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                    return GestureDetector(
+                      onTap: () {
+                        Routefly.push('/pokemon/${pokemon?.id ?? 1}');
+                      },
+                      child: Card(
+                        color: pokemonType,
+                        child: Stack(
+                          children: [
+                            Align(
+                              alignment: Alignment.bottomRight,
+                              child: Image.network(
+                                pokemon?.sprites.frontDefault ?? '',
+                                fit: BoxFit.cover,
+                                height: 100.0,
+                                width: 100.0,
                               ),
                             ),
-                            subtitle: Text(
-                              pokemon?.types[0].type.name ?? '',
-                              style: TextStyle(
-                                color: pokemonType,
-                                backgroundColor: Colors.white,
-                                fontWeight: FontWeight.bold,
+                            ListTile(
+                              title: Text(
+                                pokemon?.name.toUpperCase() ?? '',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              subtitle: Text(
+                                pokemon?.types[0].type.name ?? '',
+                                style: TextStyle(
+                                  color: pokemonType,
+                                  backgroundColor: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     );
                   },

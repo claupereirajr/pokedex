@@ -11,6 +11,7 @@ import 'package:pokedex/data/services/pokemon/pokemon_local_storage.dart';
 import 'package:pokedex/data/services/type/type_client_http.dart';
 import 'package:pokedex/data/services/type/type_local_storage.dart';
 import 'package:pokedex/ui/home/controllers/home_controller.dart';
+import 'package:pokedex/ui/pokemon/controllers/pokemon_controller.dart';
 import 'package:pokedex/ui/type/controllers/type_controller.dart';
 
 final injector = AutoInjector();
@@ -33,4 +34,5 @@ void setupDependencies() {
   // UI
   injector.addSingleton(HomeControllers.new);
   injector.addSingleton(TypeController.new);
+  injector.addSingleton(PokemonController.new);
 }
