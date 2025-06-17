@@ -23,7 +23,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    homeController.dispose();
     super.dispose();
   }
 
@@ -111,10 +110,8 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               subtitle: Text(
-                                pokemon?.types[0].type.name ?? '',
+                                pokemon?.types[0].type.name.toUpperCase() ?? '',
                                 style: TextStyle(
-                                  color: pokemonType,
-                                  backgroundColor: Colors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

@@ -11,12 +11,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
       case 0:
         Routefly.navigate(routePaths.home);
         break;
-      case 1:
-        Routefly.navigate(routePaths.type);
-        break;
-      // case 2:
-      //   Routefly.navigate(routePaths.config);
-      //   break;
       default:
         Routefly.navigate(routePaths.home);
         break;
@@ -37,7 +31,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
         NavigationDestination(
           icon: Icon(Icons.category_outlined),
           selectedIcon: Icon(Icons.category),
-          label: 'Type',
+          label: 'Pokemon',
         ),
         NavigationDestination(
           icon: Icon(Icons.settings_outlined),

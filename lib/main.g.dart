@@ -9,19 +9,14 @@ List<RouteEntity> get routes => [
         routeBuilder: b0Builder,
       ),
       RouteEntity(
-        key: '/type',
-        uri: Uri.parse('/type'),
-        routeBuilder: b1Builder,
-      ),
-      RouteEntity(
         key: '/splash',
         uri: Uri.parse('/splash'),
-        routeBuilder: b2Builder,
+        routeBuilder: b1Builder,
       ),
       RouteEntity(
         key: '/home',
         uri: Uri.parse('/home'),
-        routeBuilder: b3Builder,
+        routeBuilder: b2Builder,
       ),
     ];
 
@@ -31,7 +26,6 @@ const routePaths = (
     path: '/pokemon',
     $id: '/pokemon/[id]',
   ),
-  type: '/type',
   splash: '/splash',
   home: '/home',
 );
