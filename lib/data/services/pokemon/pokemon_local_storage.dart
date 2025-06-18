@@ -12,30 +12,56 @@ class PokemonLocalStorage {
 
   AsyncResult<PokemonEntity> getPokemon(int id) {
     return _localStorage.getData(_pokemonKey).map(
-          (value) => (value as List)
+          (value) {
+            final List<dynamic> jsonList = jsonDecode(value);
+            return jsonList
               .map((e) => PokemonEntity.fromJson(e))
-              .firstWhere((element) => element.id == id),
+              .firstWhere((element) => element.id == id);
+          },
         );
   }
 
   AsyncResult<List<PokemonEntity>> getListPokemons() async {
     final listPokemons = _localStorage.getData(_pokemonKey).map(
-          (value) =>
-              (value as List).map((e) => PokemonEntity.fromJson(e)).toList(),
+          (value) {
+            final List<dynamic> jsonList = jsonDecode(value);
+            return jsonList.map((e) => PokemonEntity.fromJson(e)).toList();
+          },
         );
     return listPokemons;
   }
 
   AsyncResult<List<PokemonEntity>> saveListPokemons(
       List<PokemonEntity> pokemons) async {
+    final List<Map<String, dynamic>> pokemonsJson = pokemons.map((p) => p.toJson()).toList();
     return _localStorage
-        .saveData(_pokemonKey, jsonEncode(pokemons.toString()))
+        .saveData(_pokemonKey, jsonEncode(pokemonsJson))
         .pure(pokemons);
   }
 
   AsyncResult<PokemonEntity> savePokemon(PokemonEntity pokemon) async {
-    return _localStorage
-        .saveData(_pokemonKey, jsonEncode(pokemon.toString()))
-        .pure(pokemon);
+    // First get existing pokemons
+    final existingPokemonsResult = await getListPokemons();
+    
+    if (existingPokemonsResult.isSuccess()) {
+      final existingPokemons = existingPokemonsResult.getOrNull() ?? [];
+      
+      // Check if pokemon already exists in the list
+      final pokemonIndex = existingPokemons.indexWhere((p) => p.id == pokemon.id);
+      
+      if (pokemonIndex >= 0) {
+        // Replace existing pokemon
+        existingPokemons[pokemonIndex] = pokemon;
+      } else {
+        // Add new pokemon
+        existingPokemons.add(pokemon);
+      }
+      
+      // Save the updated list
+      return saveListPokemons(existingPokemons).map((_) => pokemon);
+    } else {
+      // If no existing pokemons, create a new list with just this pokemon
+      return saveListPokemons([pokemon]).map((_) => pokemon);
+    }
   }
 }

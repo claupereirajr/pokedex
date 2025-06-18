@@ -85,7 +85,9 @@ class _HomePageState extends State<HomePage> {
                     };
                     return GestureDetector(
                       onTap: () {
-                        Routefly.push('/pokemon/${pokemon?.id ?? 1}');
+                        // Make sure we're passing a valid ID
+                        final id = pokemon?.id ?? 1;
+                        Routefly.navigate('/pokemon/$id');
                       },
                       child: Card(
                         color: pokemonType,

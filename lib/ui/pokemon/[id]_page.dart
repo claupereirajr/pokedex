@@ -18,7 +18,7 @@ class _PokemonPageState extends State<PokemonPage> {
   @override
   void initState() {
     super.initState();
-    final idString = Routefly.query.params['id'] ?? '1';
+    final idString = Routefly.query['id'] ?? '1';
     final int id = int.tryParse(idString) ?? 1;
     pokemonController.getPokemon(id);
   }
